@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+.logotipo{
+  width: 100%;
+}
+
+.contenedor{
+  background-color: rgba(126, 0, 199, 0.486);
+}
+
+.carrito{
+  background-color: rgba(47, 0, 255, 0.493);
+  margin-right: 15px;
+  border-color: whitesmoke;
+}
+
+.carrito:hover{
+  background-color: rgba(110, 110, 110, 0.685);
+}
