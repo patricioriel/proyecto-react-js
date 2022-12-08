@@ -3,7 +3,7 @@ import React from "react";
 const Cartwidget = () => {
     return (
         <button type="button" className="btn carrito position-relative">
-            <img src="imagenes/carrito.png" alt="Carrito" width={30} />
+            <img src="https://i.postimg.cc/rDnPBpN0/carrito.png" alt="Carrito" width={30} />
             <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                 1
             </span>
