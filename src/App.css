@@ -1,9 +1,14 @@
+body{
+  background: radial-gradient(circle, #eeaeca 0%, #94bbe9 100%);
+}
+
 .logotipo{
   width: 100%;
 }
 
-.contenedor{
-  background-color: rgba(126, 0, 199, 0.486);
+.navbar{
+  background: linear-gradient(90deg, rgba(149,111,255,1) 0%, rgba(197,115,255,1) 52%, rgba(210,95,255,1) 100%);
+  margin: 0;
 }
 
 .carrito{
@@ -19,9 +24,17 @@
 
 .card{
   width: 18rem;
+  background: rgba(255, 255, 255, 0.671);
+  border-color: white;
 }
 
-.row{
-  column-gap: 15px;
-  row-gap: 15px;
+.caja{
+  column-gap: 10px;
+  row-gap: 10px;
 }
+
+.divlogo {
+  display: flex; }
+  .divlogo img {
+    width: 100%; }
+

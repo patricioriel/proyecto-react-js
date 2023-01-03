@@ -6,7 +6,7 @@ const Itemlist = ({listProducts}) =>{
    
 
     return(
-        <div className="row mt-2 ms-2">
+        <div className="row mt-2 ms-2 caja justify-content-center">
            {listProducts.map(product => <Item key={product.id} product={product} />)}
         </div>
     )

@@ -4,9 +4,9 @@ import { NavLink, Link} from "react-router-dom";
 
 const Navbar = () => {
     return (
-        <div className="contenedor">
+        <div className="container-fluid navbar row">
             <div className="row">
-            <div className="col-md-8">
+            <div className="col-md-10">
                 <nav className="navbar navbar-expand-lg">
                     <div className="container-fluid">
                         <Link className="navbar-brand" to={"/"}><img src="https://cdn-icons-png.flaticon.com/512/1182/1182138.png" alt="logo" width={70} /></Link>
@@ -16,13 +16,13 @@ const Navbar = () => {
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li className="nav-item">
-                                    <NavLink className="nav-link" activeclassname="page" to={"category/tortasclasicas"}>Tortas clásicas</NavLink>
+                                    <NavLink className="nav-link fs-4" activeclassname="page" to={"category/tortasclasicas"}>Tortas clásicas</NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <NavLink className="nav-link" activeclassname="page" aria-current="page" to={"category/apedido"}>A pedido</NavLink>
+                                    <NavLink className="nav-link fs-4" activeclassname="page" aria-current="page" to={"category/apedido"}>A pedido</NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <NavLink className="nav-link" activeclassname="page" aria-current="page" to={"category/numericas"}>Numericas</NavLink>
+                                    <NavLink className="nav-link fs-4" activeclassname="page" aria-current="page" to={"category/numericas"}>Numericas</NavLink>
                                 </li>
                             </ul>
                         </div>
@@ -30,7 +30,7 @@ const Navbar = () => {
                 </nav>
                 </div>
 
-                <div className="col-md-3 d-flex align-items-center justify-content-end">
+                <div className="col-md-2 d-flex align-items-center justify-content-end">
                     <Cartwidget />
                 </div>
             </div>
