@@ -37,7 +37,7 @@ const ItemdetailContainer = () =>{
     }, [id]);
    
     return(
-        <div>
+        <div className="container-fluid">
                {loading ? <Loader/> : <Itemdetail item={item}/>
              }
         </div>

@@ -11,6 +11,7 @@ import ItemCount from "./components/ItemCount";
 import CartContextProvider from "./components/context/CartContext";
 import Cart from "./components/Cart";
 import Checkout from "./components/Checkout";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
           <Route path={"*"} element={<Error404 />} />
           <Route path={"/checkout"} element={<Checkout />} />
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </CartContextProvider>
   )

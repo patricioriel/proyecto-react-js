@@ -18,7 +18,7 @@ body{
 }
 
 .carrito:hover{
-  background-color: rgba(255, 0, 191, 0.418);
+  background-color: rgb(204, 13, 211);
   border: 2px solid whitesmoke;
 }
 
@@ -37,4 +37,22 @@ body{
   display: flex; }
   .divlogo img {
     width: 100%; }
+
+.btncart{
+  background-color: rgb(148, 0, 153);
+  color: white;
+}
+
+.btncart:hover{
+  background-color: rgb(204, 13, 211);
+  color: white;
+}
+
+.vermas{
+  width: 90%;
+}
+
+.cajaproductos{
+  background-color: #bc55ec41;
+}
 

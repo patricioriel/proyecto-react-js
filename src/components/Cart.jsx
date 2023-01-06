@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Cart = () => {
 
     const { cart, cartTotal, removeItem, clear, sumaTotal } = useContext(CartContext)
-    
+
 
     if (cartTotal() === 0) {
         return (
@@ -14,9 +14,9 @@ const Cart = () => {
                 <div className="row">
                     <div className="col-md-12 text-center">
                         <div className="alert alert-danger mt-5" role="alert">
-                            No se encontraron productos en el carrito.
+                            <b> No se encontraron productos en el carrito.</b>
                         </div>
-                        <Link to={"/"} className="btn btn-warning">Volver a la pagina principal</Link>
+                        <Link to={"/"} className="btn btncart">Volver a la pagina principal</Link>
                     </div>
                 </div>
             </div>
@@ -34,7 +34,7 @@ const Cart = () => {
                         <thead>
                             <tr>
                                 <th scope="col" colSpan={5} className="text-end">
-                                    <Link onClick={clear} className="btn btn-warning" title="Vaciar carrito">Vaciar carrito</Link>
+                                    <Link onClick={clear} className="btn btncart" title="Vaciar carrito">Vaciar carrito</Link>
                                 </th>
                             </tr>
                             <tr>
@@ -46,22 +46,28 @@ const Cart = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {cart.map(item=>(
+                            {cart.map(item => (
                                 <tr key={item.id}>
                                     <td><img src={item.image} alt={item.nombre} width={90} /></td>
-                                    <td className="align-middle text-center">{item.name}</td>
-                                    <td className="align-middle text-center">{item.quantity}</td>
-                                    <td className="align-middle text-center">${item.quantity * item.price}</td>
-                                    <td className="align-middle text-end"><Link onClick= {()=>{removeItem(item.id)}} title="Eliminar producto"> <img src="imagenes/basura.png" alt="Eliminar producto" width={32} /> </Link></td>
+                                    <td className="align-middle text-center fs-4">{item.name}</td>
+                                    <td className="align-middle text-center fs-4">
+                                        <div class="btn-group btn-group-lg" role="group" aria-label="Basic outlined example">
+                                            <button type="button" class="btn btn-outline-dark">-</button>
+                                            <button type="button" class="btn btn-outline-dark">{item.quantity}</button>
+                                            <button type="button" class="btn btn-outline-dark">+</button>
+                                        </div>
+                                    </td>
+                                    <td className="align-middle text-center fs-4">${item.quantity * item.price}</td>
+                                    <td className="align-middle text-end"><Link onClick={() => { removeItem(item.id) }} title="Eliminar producto"> <img src="imagenes/basura.png" alt="Eliminar producto" width={32} /> </Link></td>
                                 </tr>
                             )
 
                             )}
                             <tr>
                                 <td colSpan={2}>&nbsp;</td>
-                                <td className="text-center"><b>Total a pagar</b></td>
-                                <td className="text-center"><b>$ {sumaTotal()}</b> </td>
-                                <td className="text-end"><Link to={"/checkout"} className="btn btn-warning">Finalizar compra</Link></td>
+                                <td className="text-center fs-5"><b>Total a pagar</b></td>
+                                <td className="text-center fs-5"><b>$ {sumaTotal()}</b> </td>
+                                <td className="text-end"><Link to={"/checkout"} className="btn btncart">Finalizar compra</Link></td>
                             </tr>
                         </tbody>
                     </table>
