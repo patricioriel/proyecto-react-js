@@ -12,7 +12,7 @@ const isInCart = (id) =>{
 }
 
 const addItem = (item, quantity) =>{
-    if (isInCart()){
+    if (isInCart(item.id)){
         let pos = cart.findIndex(x => x.id === item.id);
         cart[pos].quantity += quantity;
         setCart([...cart])
@@ -38,7 +38,6 @@ const cartTotal = () =>{
 const sumaTotal = () =>{
     return cart.reduce((total, item)=>total += item.quantity * item.price , 0)
 }
-
     return(
         <CartContext.Provider value={{cart, addItem, removeItem, clear, cartTotal, sumaTotal}}>
             {children}

@@ -13,18 +13,6 @@ const ItemdetailContainer = () =>{
     const {id} = useParams();
     const [loading, setLoading] = useState(true);
 
-    // useEffect(()=> {
-    //    const promesa = new Promise ((resolve, reject)=>{
-    //     setTimeout(() => {
-    //         resolve(products.find(item=> item.id === parseInt(id)))
-    //     }, 2000);
-    //    })
-
-    //     promesa.then(res =>{
-    //         setItem(res)
-    //     })
-    // }, [id])
-
     useEffect(() => {
             const db = getFirestore();
             const item = doc(db, "productos", id);

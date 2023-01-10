@@ -20,13 +20,13 @@ const Checkout = () => {
             order_date: `${fecha.getFullYear()}-${fecha.getMonth() + 1}-${fecha.getDate()}-${fecha.getHours()}:${fecha.getMinutes()}:${fecha.getSeconds()}`,
         };
 
-    const db = getFirestore();
-    const ordersCollection = collection(db, "orders");
-    addDoc(ordersCollection, order).then((snapshot) => {
-        console.log(snapshot.id);
-        setOrderId(snapshot.id);
-        clear();
-    });
+        const db = getFirestore();
+        const ordersCollection = collection(db, "orders");
+        addDoc(ordersCollection, order).then((snapshot) => {
+            console.log(snapshot.id);
+            setOrderId(snapshot.id);
+            clear();
+        });
     }
 
     return (
@@ -48,7 +48,7 @@ const Checkout = () => {
                             <input type="text" className="form-control" placeholder="Ingrese su email" onInput={(e) => { setEmail(e.target.value) }} />
                         </div>
                         <div className="text-center">
-                        <button type="button" className="btn btncart" onClick={generarOrden}>Generar pedido</button>
+                            <button type="button" className="btn btncart" onClick={generarOrden}>Generar pedido</button>
                         </div>
                     </form>
                 </div>
@@ -67,7 +67,7 @@ const Checkout = () => {
 
                             )}
                             <tr>
-                                
+
                                 <td colspan="2" scope="colgroup" className="text-end fs-5">Total a pagar:</td>
                                 <td colspan="2" scope="colgroup" className="text-end fs-5"><b>$ {sumaTotal()}</b> </td>
 

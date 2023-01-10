@@ -50,13 +50,7 @@ const Cart = () => {
                                 <tr key={item.id}>
                                     <td><img src={item.image} alt={item.nombre} width={90} /></td>
                                     <td className="align-middle text-center fs-4">{item.name}</td>
-                                    <td className="align-middle text-center fs-4">
-                                        <div class="btn-group btn-group-lg" role="group" aria-label="Basic outlined example">
-                                            <button type="button" class="btn btn-outline-dark">-</button>
-                                            <button type="button" class="btn btn-outline-dark">{item.quantity}</button>
-                                            <button type="button" class="btn btn-outline-dark">+</button>
-                                        </div>
-                                    </td>
+                                    <td className="align-middle text-center fs-4">{item.quantity}</td>
                                     <td className="align-middle text-center fs-4">${item.quantity * item.price}</td>
                                     <td className="align-middle text-end"><Link onClick={() => { removeItem(item.id) }} title="Eliminar producto"> <img src="imagenes/basura.png" alt="Eliminar producto" width={32} /> </Link></td>
                                 </tr>
