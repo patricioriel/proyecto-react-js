@@ -68,8 +68,8 @@ const Checkout = () => {
                             )}
                             <tr>
 
-                                <td colspan="2" scope="colgroup" className="text-end fs-5">Total a pagar:</td>
-                                <td colspan="2" scope="colgroup" className="text-end fs-5"><b>$ {sumaTotal()}</b> </td>
+                                <th colspan="2" scope="colgroup" className="text-end fs-5">Total a pagar:</th>
+                                <th colspan="2" scope="colgroup" className="text-end fs-5"><b>$ {sumaTotal()}</b> </th>
 
                             </tr>
                         </tbody>
