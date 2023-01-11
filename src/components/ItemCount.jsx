@@ -35,13 +35,13 @@ const ItemCount = ({stock, onAdd}) => {
     return (
         <div className="row">
             <div className="col-md-12 ">
-                <div className="btn-group btn-group-lg" role="group" aria-label="Basic outlined example">
+                <div className="btn-group btn-group-lg mt-1 ms-3" role="group" aria-label="Basic outlined example">
                     <button type="button" className="btn btn-outline-dark ms-3" onClick={restarProducto}> - </button>
                     <button type="button" className="btn btn-outline-dark">{counter}</button>
                     <button type="button" className="btn btn-outline-dark" onClick={sumarProducto}> + </button>
                     </div>
-             {vendido ? <Link to={"/cart"} className="btn btn-lg btn-outline-dark ms-3">Finalizar compra</Link>  : <button type="button" className="btn btn-lg btn-outline-dark ms-3 mt-1" onClick={()=>{agregarAlCarrito(counter)}}>Agregar al carrito</button>} 
-            <Link to={"/"} className="btn btn-lg btn-outline-dark mt-3 ms-3">Seguir comprando</Link>
+             {vendido ? <Link to={"/cart"} className="btn btn-lg btn-outline-dark ms-3 mt-1">Finalizar compra</Link>  : <button type="button" className="btn btn-lg btn-outline-dark ms-3 mt-1" onClick={()=>{agregarAlCarrito(counter)}}>Agregar al carrito</button>} 
+            <Link to={"/"} className="btn btn-lg btn-outline-dark ms-3 mt-1">Seguir comprando</Link>
             </div>
         </div>
     )
