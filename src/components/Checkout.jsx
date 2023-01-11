@@ -54,7 +54,7 @@ const Checkout = () => {
                 </div>
                 <div className="col-md-4 mt-4">
                     <h3 className="text-center">Tu carrito:</h3>
-                    <table className="table mt-4">
+                    <table className="table mt-4 table-hover">
                         <tbody>
                             {cart.map(item => (
                                 <tr key={item.id}>

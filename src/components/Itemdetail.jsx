@@ -23,7 +23,7 @@ useEffect(() =>{
     return(
         <div className="row mt-4">
             <div className="col-md-4 offset-md-2 text-center">
-            <img src={item.image} alt={item.name} className="img-fluid w-75 rounded-4"/>
+            <img src={item.image} alt={item.name} className="img-fluid w-100 rounded-4"/>
             </div>
             <div className="col-md-4">
             <h1 className="text-center mt-3 text-decoration-underline">{item.name}</h1>

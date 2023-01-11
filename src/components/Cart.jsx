@@ -30,7 +30,7 @@ const Cart = () => {
             <div className="row">
                 <div className="col-md-12">
                     <h1 className="text-center mt-3">Tu carrito</h1>
-                    <table class="table mt-4">
+                    <table class="table mt-4 table-hover">
                         <thead>
                             <tr>
                                 <th scope="col" colSpan={5} className="text-end">
